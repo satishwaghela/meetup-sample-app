@@ -20,7 +20,9 @@
     "material-ui-popup-state": "^1.6.1",
     "next": "9.5.3",
     "notistack": "^1.0.0",
+    "performance-now": "^2.1.0",
     "react": "16.13.1",
+    "react-charts": "^2.0.0-beta.7",
     "react-dom": "16.13.1",
     "react-table": "^7.5.1",
     "use-immer": "^0.4.1"
