@@ -19,7 +19,7 @@ function AddParticipants () {
   const handleSubmit = (e) => {
     form.getFormValidity((validity) => {
       if (validity.valid) {
-        fetch('/api/add_participant', {
+        fetch('/api/participants/add', {
           method: 'post',
           body: JSON.stringify(form.formState.formData)
         }).then(res => {

@@ -6,12 +6,12 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import PeopleIcon from '@material-ui/icons/People';
 import menuStyles from './MenuStyles';
 
-const CustomLink = forwardRef((props, ref) => <a {...props} />);
+const CustomLink = forwardRef((props, ref) => <a {...props} href={props.to} />);
 
 export default function Menu (props) {
   const { activeMenu = [] } = props;
@@ -70,15 +70,21 @@ MenuItem.propTypes = {
 
 export const menus = {
   dashboard: {
-    icon: <InboxIcon />,
+    icon: <DashboardIcon />,
     label: 'Dashboard',
-    to: '/dashboard',
+    to: '/',
     key: 'dashboard'
   },
-  help: {
-    icon: <MailIcon />,
+  add: {
+    icon: <AccountBoxIcon />,
     label: 'Add Participant',
     to: '/add',
     key: 'add'
+  },
+  list_participants: {
+    icon: <PeopleIcon />,
+    label: 'Participants',
+    to: '/participants',
+    key: 'participants'
   }
 };
